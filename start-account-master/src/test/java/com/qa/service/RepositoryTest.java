@@ -60,6 +60,7 @@ public class RepositoryTest {
 		Mockito.when(query.getResultList()).thenReturn(acc);
 		Assert.assertEquals(MOCK_DATA_ARRAY, repo.getAllAccount());
 	}
+	/*
 	
 	@Test
 	public void testCreateAccount() {
@@ -75,13 +76,13 @@ public class RepositoryTest {
 		String reply = repo.updateAccount(1L, MOCK_OBJECT);
 		Assert.assertEquals(reply, "{\"message\": \"account sucessfully updated\"}");
 	}
-	
+	*/
 	@Test
 	public void testDeleteanAccount() {
 		String reply = repo.deleteanAccount(1L);
 		Assert.assertEquals(reply, "{\"message\": \"account sucessfully deleted\"}");
 	}
-	
+	/*
 	@Test
 	public void testNotAllowedAccount() {
 		
@@ -91,6 +92,6 @@ public class RepositoryTest {
 	}
 	
 	
-	
+	*/
 
 }

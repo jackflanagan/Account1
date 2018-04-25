@@ -30,7 +30,7 @@ public class RepositoryLayer {
 	
 	
 	public String getAllAccount() {
-		Query query = manager.createQuery("Select a FROM ACCOUNT a");
+		Query query = manager.createQuery("Select a FROM Account a");
 		Collection <Account> ac = (Collection<Account>) query.getResultList();
 		return util.getJSONForObject(ac);
 		
