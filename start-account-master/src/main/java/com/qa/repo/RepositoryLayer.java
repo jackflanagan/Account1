@@ -42,7 +42,7 @@ public class RepositoryLayer {
 		Account anAccount = util.getObjectForJSON(accout, Account.class);
 		
 		String acNo = anAccount.getAccountNumber();
-		if(acNo.equals("999")) {
+		if(acNo.equals("9999")) {
 			return "{“message”: “This account is blocked”}";
 
 			
