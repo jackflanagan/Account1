@@ -41,11 +41,16 @@ public class RepositoryLayer {
 	public String createanAccount(String accout) {
 		Account anAccount = util.getObjectForJSON(accout, Account.class);
 		
-		
+		String acNo = anAccount.getAccountNumber();
+		if(acNo.equals("999")) {
+			return "{“message”: “This account is blocked”}";
+
+			
+		}else {
 		
 		manager.persist(anAccount);
 		return "{\"message\": \"account has been sucessfully added\"}";
-	}
+	}}
 	
 	@Transactional(REQUIRED)
 	public String createAccount(String ac) {
